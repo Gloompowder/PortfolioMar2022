@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-function Coding(props) {
+function SecondNav(props) {
     return (
-        <div className="Coding">
+        <div className="SecondNav">
         </div>
     );
   }
   
-  export default Coding;
+  export default SecondNav;
