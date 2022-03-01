@@ -1,14 +1,15 @@
-reportWebVitals();
 import React from 'react';
+import * as ReactDOM from "react-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter} from 'react-router-dom';
 
-const rootElement = document.getElementById("root");
-render(
+ReactDOM.render(
   <BrowserRouter>
-    <App />
+      <App />
   </BrowserRouter>,
-  rootElement
+  document.getElementById('root')
 );
+reportWebVitals();
 
