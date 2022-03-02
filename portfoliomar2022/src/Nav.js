@@ -11,17 +11,17 @@ function Nav(props) {
         <Link className= "nav-home" to="/">William Lin</Link>
         <ul className = "nav-quad">
             <ul className = "nav-trio">
-            <Link to="/about-me"> <BiBrain /> About Me</Link>
-            <Link to="/coding"> <BiCode /> Coding</Link>
-            <Link to="/design"> <BiPalette /> Design</Link>
+            <Link className = "about-me" to="/about-me"> <BiBrain /> About Me</Link>
+            <Link className = "coding" to="/coding"> <BiCode /> Coding</Link>
+            <Link className = "design" to="/design"> <BiPalette /> Design</Link>
             </ul>
-            <Link className ="contact-link" to="/contact"> <BiPhone height= "1rem" width = "auto"/>Contact</Link>
+            <Link className ="contact" to="/contact"> <BiPhone />Contact</Link>
         </ul>
     </nav>:         
     <nav className = "mobileNav">
         <Link className= "mobile-nav-home" to="/">William Lin</Link>
-        <ul>
-            <a>
+        <ul className= "mobile-nav-solo">
+            <a className="mobile-nav-menu" >
                 <BiMenu />Menu
             </a>
         </ul>

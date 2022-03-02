@@ -1,16 +1,95 @@
 import * as React from "react";
 import Pdf from "./William Lin Resume.pdf";
 // import Photo from './profilepic.png'
-
-
+import useEffect from 'react';
 
 function Home(props) {
+
+    const content= ()=>{
+    // List of sentences
+var _CONTENT = [ 
+	"FullStack Developer",
+    "Graphic Designer"
+];
+
+// Current sentence being processed
+var _PART = 0;
+
+// Character number of the current sentence being processed 
+var _PART_INDEX = 0;
+
+// Element that holds the text
+var _ELEMENT = document.querySelector("#text");
+// Holds the handle returned from setInterval
+var _INTERVAL_VAL;
+
+
+// Cursor element 
+var _CURSOR = document.querySelector("#cursor");
+
+// Implements typing effect
+function Type() { 
+	// Get substring with 1 characater added
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX++;
+
+	// If full sentence has been displayed then start to delete the sentence after some time
+	if(text === _CONTENT[_PART]) {
+		// Hide the cursor
+		_CURSOR.style.display = 'none';
+
+		clearInterval(_INTERVAL_VAL);
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Delete, 50);
+		}, 1000);
+	}
+}
+
+// Implements deleting effect
+function Delete() {
+	// Get substring with 1 characater deleted
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX--;
+
+	// If sentence has been deleted then start to display the next sentence
+	if(text === '') {
+		clearInterval(_INTERVAL_VAL);
+
+		// If current sentence was last then display the first one, else move to the next
+		if(_PART == (_CONTENT.length - 1))
+			_PART = 0;
+		else
+			_PART++;
+		
+		_PART_INDEX = 0;
+
+		// Start to display the next sentence after some time
+		setTimeout(function() {
+			_CURSOR.style.display = 'inline-block';
+			_INTERVAL_VAL = setInterval(Type, 100);
+		}, 200);
+	}
+}
+
+
+// Start the typing effect on load
+_INTERVAL_VAL = setInterval(Type, 100);
+
+}
     return (
         <div className="Home">
             You're on the Home Page
-            {/* <Photo /> */}
- <a href={Pdf} target="_blank" rel="noreferrer">Resume </a>
- <a href="https://www.linkedin.com/in/williamlincodeanddesign/" target="blank">LinkedIn</a>
+            <div className= "id-border">
+            <h1>This is your Profile Picture</h1>
+            <h1>Hello, My Name is William</h1>
+            <h1 className="intro" display="inline">I am a </h1><div id="container">
+	<div id="text"> </div><div id="cursor"></div>{content()}
+</div>
+<a href={Pdf} target="_blank" rel="noreferrer">Resume </a>
+<a href="https://www.linkedin.com/in/williamlincodeanddesign/" target="blank">LinkedIn</a>
+            </div>
         </div>
     );
   }
