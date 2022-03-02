@@ -34,8 +34,12 @@ function App() {
       <Nav height = {height} width = {width}/>
       <SecondNav height = {height} width = {width}/>
       <Routes>
+        <Route path='*' element={<NotFound />} />
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>
-
+        <Route path="/coding" element={<Coding />} />
+        <Route path="/design" element={<Design />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about-me" element={<AboutMe />} />
       </Routes>
     </div>
   );

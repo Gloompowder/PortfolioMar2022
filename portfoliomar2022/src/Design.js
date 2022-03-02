@@ -1,11 +1,12 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-function Home(props) {
+function Design(props) {
     return (
-        <div className="Home">
+        <div className="Design">
+            You're on the Design Page
         </div>
     );
   }
   
-  export default Home;
+  export default Design;
