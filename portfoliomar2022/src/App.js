@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Nav from "./Nav";
 import SecondNav from './SecondNav';
-import FourohFour from "./NotFound";
+import NotFound from "./NotFound";
 import Coding from "./Coding.js";
 import Design from "./Design.js";
 import AboutMe from "./AboutMe.js";
@@ -34,12 +34,12 @@ function App() {
       <Nav height = {height} width = {width}/>
       <SecondNav height = {height} width = {width}/>
       <Routes>
-        <Route path='*' element={<NotFound />} />
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>
         <Route path="/coding" element={<Coding />} />
         <Route path="/design" element={<Design />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/*" element={<NotFound />}/>
       </Routes>
     </div>
   );
