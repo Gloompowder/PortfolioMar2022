@@ -1,7 +1,7 @@
 import * as React from "react";
 import Pdf from "./William Lin Resume.pdf";
 // import Photo from './profilepic.png'
-import Typical from 'react-typical';
+import Textline from "./Textline";
 
 function Home(props) {
     return (
@@ -10,8 +10,7 @@ function Home(props) {
             <div className= "id-border">
             <h1>This is your Profile Picture</h1>
             <h1>Hello, My Name is William</h1>
-			<p>I'm a 
-				</p>
+			<p>I'm a</p> <Textline />
 </div>
 <a href={Pdf} target="_blank" rel="noreferrer">Resume </a>
 <a href="https://www.linkedin.com/in/williamlincodeanddesign/" target="blank">LinkedIn</a>
