@@ -1,14 +1,14 @@
 import * as React from "react";
 import Pdf from "./William Lin Resume.pdf";
-// import Photo from './profilepic.png'
+import profilepic from "./images/profilepic.png";
 import Textline from "./Textline";
 
 function Home(props) {
     return (
         <div className="Home">
-            You're on the Home Page
+			Welcome to my Portfolio
             <div className= "id-border">
-            <h1>This is your Profile Picture</h1>
+            <img src = {profilepic} alt= "William Lin Profile Picture" height= "auto" width = "35%vw"/>
             <h1>Hello, My Name is William</h1>
 			<p>I'm a</p> <Textline />
 </div>
