@@ -1,6 +1,5 @@
 import * as React from "react";
 import Pdf from "./William Lin Resume.pdf";
-import profilepic from "./images/profilepic.png";
 import Textline from "./Textline";
 import { BsTwitter, BsShop, BsFilePersonFill, BsGithub, BsMedium } from "react-icons/bs";
 
@@ -8,7 +7,6 @@ function Home(props) {
     return (
         <div className="Home">
             <div className= "id-border">
-            <img src = {profilepic} alt= "William Lin Profile" height= "auto" width = "25%vw"/>
 			<div className="content">
 				<h1>Hello, My Name is</h1><h1>William Lin</h1>
 				<p>I'm a</p> <Textline /><BsShop />
