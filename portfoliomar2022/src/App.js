@@ -1,8 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Nav from "./Nav";
-import SecondNav from './SecondNav';
 import NotFound from "./NotFound";
 import Coding from "./Coding.js";
 import Design from "./Design.js";
@@ -14,7 +13,33 @@ import Home from "./Home";
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
+  const [screen, setScreen] = useState('home');
+  const [light, setLight] = useState('light');
 
+  const codingRender = () =>{    
+    setScreen('coding')
+  }
+
+  const homeRender = () =>{
+    setScreen('home')
+  }
+
+  const designRender =() => {
+    setScreen('design')
+  }
+
+  const contactRender = () => {
+    setScreen('contact')
+  }
+
+  const notFoundRender = () => {
+    setScreen('notfound')
+  }
+
+  const aboutmeRender = () => {
+    setScreen('aboutme')
+  }
+  const renders = {codingRender, homeRender, designRender, contactRender, notFoundRender, aboutmeRender}
   useEffect(()=>{
     const updateWindowDimensions = () => {
       const newHeight = window.innerHeight;
@@ -31,8 +56,7 @@ function App() {
   },[])
   return (
 <div className = "App">
-      <Nav height = {height} width = {width}/>
-      <SecondNav height = {height} width = {width}/>
+      <Nav height = {height} width = {width} renders = {renders} screen = {screen}/>
       <Routes>
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>
         <Route path="/coding" element={<Coding />} />

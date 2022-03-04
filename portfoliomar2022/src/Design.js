@@ -1,10 +1,15 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import SecondNav from "./SecondNav";
 
 function Design(props) {
     return (
         <div className="Design">
-            You're on the Design Page
+                  <SecondNav search="design"/>
+            You're on the Design Page!
+            It's Under Construction but you should take a look at <a href="https://willlin1996.wixsite.com/portfolio" alt="wix link" target = "_blank" rel="noreferrer">
+                this!
+            </a>
+
         </div>
     );
   }

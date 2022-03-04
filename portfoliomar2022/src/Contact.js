@@ -1,10 +1,12 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { BsFillEnvelopeFill } from 'react-icons/bs'
 
 function Contact(props) {
     return (
         <div className="Contact">
-            You're on the Contact Page
+            Want to utilize my coding or design skills?
+            Let's discuss potential collaborations and opportunities.
+            <a href="mailto:willlin1996@gmail.com?subject=Let's Connect!">Email Me<BsFillEnvelopeFill/></a> 
         </div>
     );
   }
