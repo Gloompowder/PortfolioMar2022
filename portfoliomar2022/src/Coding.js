@@ -13,7 +13,7 @@ function Coding(props) {
             backend:["Ruby", "Ruby on Rails"],
             database:"SQL",
             devops:"Heroku",
-            image:"",
+            image:PlanetHack,
             demo:"https://www.youtube.com/watch?v=GCOHgwZtoK8",
             website:"https://planet-hack.herokuapp.com/"
         }},
@@ -23,16 +23,16 @@ function Coding(props) {
             backend:["Ruby","Ruby on Rails"],
             database:"PostgreSQL",
             devops:"",
-            image:"",
+            image:BrainGain,
             demo:"https://youtu.be/CP9cpjrCVSA"
         }},
         {"GuessWho":{
-            description:"A multiplayer computer-based version of the popular game, Guess Who",
+            description:"A multiplayer computer-based version of the popular game, Guess Who. You can even add your own characters and keep score!",
             frontend:["React", "Javascript"],
             backend:["Ruby","Ruby on Rails"],
             database:"PostgreSQL",
             devops:"",
-            image:"",
+            image:GuessWho,
             demo:"https://youtu.be/hEf_WQFApS4"
         }}
     ]
