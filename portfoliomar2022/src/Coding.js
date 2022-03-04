@@ -19,7 +19,7 @@ function Coding(props) {
             database:"PostgreSQL",
             devops:"",
             image:"",
-            demo:"Heroku"
+            demo:"https://youtu.be/CP9cpjrCVSA"
         },
         "GuessWho":{
             description:"",
@@ -29,7 +29,7 @@ function Coding(props) {
             devops:"",
             image:"",
             demo:""
-        },
+        }
     }
     return (
         <div className="Coding">
