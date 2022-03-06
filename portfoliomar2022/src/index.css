@@ -5,3 +5,14 @@
   font-family: Poppins;
   text-decoration:none;
 }
+
+.svg-div {
+  flex-direction: flex;
+  flex-wrap: wrap;
+}
+
+.svg-div img{
+  width: 5rem;
+  height: auto;
+  padding: 2rem;
+}

@@ -5,17 +5,16 @@ import { BiCode, BiPalette, BiBrain, BiMenu, BiPhone } from "react-icons/bi";
 
 
 function Nav(props) {
-    console.log(props)
     const isMobile = () => {
         return props.width >= 760 ?         <nav className = "Nav">
-        <Link className= "nav-home" to="/"onClick={props.renders.homeRender()}>William Lin</Link>
+        <Link className= "nav-home" to="/">William Lin</Link>
         <ul className = "nav-quad">
             <ul className = "nav-trio">
-            <Link className = "about-me" to="/about-me" onClick={props.renders.aboutmeRender()}> <BiBrain /> About Me</Link>
-            <Link className = "coding" to="/coding" onClick={props.renders.codingRender()}> <BiCode /> Coding</Link>
-            <Link className = "design" to="/design" onClick ={props.renders.designRender()}> <BiPalette /> Design</Link>
+            <Link className = "about-me" to="/about-me" > <BiBrain /> About Me</Link>
+            <Link className = "coding" to="/coding" > <BiCode /> Coding</Link>
+            <Link className = "design" to="/design" > <BiPalette /> Design</Link>
             </ul>
-            <Link className ="contact" to="/contact" onClick ={props.renders.contactRender()}> <BiPhone />Contact</Link>
+            <Link className ="contact" to="/contact" > <BiPhone />Contact</Link>
         </ul>
     </nav>:         
     <nav className = "mobileNav">
