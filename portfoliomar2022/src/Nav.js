@@ -5,7 +5,6 @@ import { BiCode, BiPalette, BiBrain, BiMenu, BiPhone } from "react-icons/bi";
 
 
 function Nav(props) {
-    console.log(props)
     const isMobile = () => {
         return props.width >= 760 ?         <nav className = "Nav">
         <Link className= "nav-home" to="/">William Lin</Link>
@@ -21,7 +20,7 @@ function Nav(props) {
     <nav className = "mobileNav">
         <Link className= "mobile-nav-home" to="/">William Lin</Link>
         <ul className= "mobile-nav-solo">
-            <button className="mobile-nav-menu" onClick={()=>props.displayToggle}>
+            <button className="mobile-nav-menu" onClick={(event)=>props.displayToggle}>
                 <BiMenu />Menu
             </button>
         </ul>

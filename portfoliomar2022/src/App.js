@@ -19,7 +19,8 @@ function App() {
 
   const modal = document.getElementById("myModal");
 
-  const displayToggle = () => {
+  const displayToggle = (event) => {
+    event.precentDefault()
     modalShow === true? setModalShow(false): console.log("its already true")
   }
 
@@ -38,9 +39,9 @@ function App() {
   },[])
   return (
 <div className = "App" >
-      <Nav height = {height} width = {width} displayToggle={()=>displayToggle} modal = {modal} modalShow = {modalShow}/>
+      <Nav height = {height} width = {width} displayToggle={displayToggle} modal = {modal} modalShow = {modalShow}/>
       {modalShow === true?       
-      <Modal displayToggle={()=>displayToggle} modal = {modal} modalShow = {modalShow}/>
+      <Modal displayToggle={displayToggle} modal = {modal} modalShow = {modalShow}/>
 :null}
       <Routes>
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>

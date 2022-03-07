@@ -9,8 +9,9 @@ function Home(props) {
             <div className= "id-border">
 			<div className="content">
 				<h1>Hello, My Name is</h1><h1>William Lin</h1>
-				<p>I'm a</p> <Textline /><BsShop />
-				<a href={'https:/www.medium.com/gloompowder'} target="_blank" rel="noreferrer"> <BsMedium/></a>
+				<p>I'm a</p> <Textline />
+				<a href={'https://www.redbubble.com/people/Gloompowder/shop'} target="_blank" rel="noreferrer"> <BsShop /></a>
+				<a href={'https://medium.com/@will-lin'} target="_blank" rel="noreferrer"> <BsMedium/></a>
 				<a href={'https:/www.twitter.com/gloompowder'} target="_blank" rel="noreferrer"> <BsTwitter/></a>
 				<a href={'https:/www.github.com/gloompowder'} target="_blank" rel="noreferrer"> <BsGithub/></a>
 				<a href={Pdf} target="_blank" rel="noreferrer">Resume <BsFilePersonFill/></a>
