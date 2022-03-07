@@ -15,12 +15,12 @@ function App() {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
   const [light, setLight] = useState('light');
+  const [modalShow, setModalShow] = useState(false);
+
+  const modal = document.getElementById("myModal");
 
   const displayToggle = () => {
-    return (document.getElementById("myModal").style.display = "none");
-  }
-  const modalOff = (e) => {
-    return e.target == document.getElementById("myModal") && document.getElementById("myModal")? document.getElementById("myModal").style.display = "none": null;
+    modalShow === true? setModalShow(false): console.log("its already true")
   }
 
   useEffect(()=>{
@@ -29,7 +29,6 @@ function App() {
       const newWidth = window.innerWidth;
       setHeight(newHeight);
       setWidth(newWidth);
-      console.log("updating height and width"); 
     };
     const addingWindowLogger =() => {
     window.addEventListener("resize", updateWindowDimensions);
@@ -39,8 +38,10 @@ function App() {
   },[])
   return (
 <div className = "App" >
-      <Nav height = {height} width = {width} />
-      <Modal displayToggle={()=>displayToggle} modalOff={()=>modalOff}/>
+      <Nav height = {height} width = {width} displayToggle={()=>displayToggle} modal = {modal} modalShow = {modalShow}/>
+      {modalShow === true?       
+      <Modal displayToggle={()=>displayToggle} modal = {modal} modalShow = {modalShow}/>
+:null}
       <Routes>
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>
         <Route path="/coding" element={<Coding />} />

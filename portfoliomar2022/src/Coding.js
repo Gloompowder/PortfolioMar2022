@@ -48,7 +48,7 @@ function Coding(props) {
                 Be aware, some of the projects may have depreciated. You may still watch the demo videos
             </h5>
             {codingProjects.map((project)=>{
-                return(<CodingCard key = {project} id = {i} project = {project}/>) 
+                return(<CodingCard key = {codingProjects.indexOf(project)} id = {codingProjects.indexOf(project)} project = {project}/>) 
             })}
         </div>
     );
