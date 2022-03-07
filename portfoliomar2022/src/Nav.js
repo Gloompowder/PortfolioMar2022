@@ -20,7 +20,7 @@ function Nav(props) {
     <nav className = "mobileNav">
         <Link className= "mobile-nav-home" to="/">William Lin</Link>
         <ul className= "mobile-nav-solo">
-            <button className="mobile-nav-menu" >
+            <button className="mobile-nav-menu"  onClick={()=>console.log("clicked menu")}>
                 <BiMenu />Menu
             </button>
         </ul>

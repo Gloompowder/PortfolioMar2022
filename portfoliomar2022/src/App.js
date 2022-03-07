@@ -7,13 +7,21 @@ import Coding from "./Coding.js";
 import Design from "./Design.js";
 import AboutMe from "./AboutMe.js";
 import Contact from "./Contact";
-import Home from "./Home";
+import Home from "./Home.js";
+import Modal from "./Modal.js"
 
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
   const [light, setLight] = useState('light');
+
+  const displayToggle = () => {
+    return (document.getElementById("myModal").style.display = "none");
+  }
+  const modalOff = (e) => {
+    return e.target == document.getElementById("myModal") && document.getElementById("myModal")? document.getElementById("myModal").style.display = "none": null;
+  }
 
   useEffect(()=>{
     const updateWindowDimensions = () => {
@@ -30,8 +38,9 @@ function App() {
     addingWindowLogger();
   },[])
   return (
-<div className = "App">
+<div className = "App" >
       <Nav height = {height} width = {width} />
+      <Modal displayToggle={()=>displayToggle} modalOff={()=>modalOff}/>
       <Routes>
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>
         <Route path="/coding" element={<Coding />} />
