@@ -24,7 +24,7 @@ function AboutMe(props) {
             <h2>
                 Hello, My name is William Lin
             </h2>
-            <img src = {profilepic} alt= "William Lin Profile" height= "auto" width = "25%vw"/>
+            <img src = {profilepic} alt= "William Lin Profile"/>
             <p>
             I am a FullStack Develoepr located in New York City. I am an avid learner and I focus my projects whether graphic or technologically based
             around effective, compelling design.

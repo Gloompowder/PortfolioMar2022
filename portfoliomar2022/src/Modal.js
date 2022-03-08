@@ -5,7 +5,7 @@ import { BiCode, BiPalette, BiBrain, BiMenu, BiPhone } from "react-icons/bi";
 function Modal(props) {
     const modal = props.modal;
     return (
-    <div id="myModal" className="modal" >
+    <div id="myModal" className="modal" display = {props.modaLShow}>
     <div className="modal-content">
     <span className="close" onClick={()=>props.spanToggle}>&times;</span>
     <Link className= "modal-home" to="/">William Lin</Link>
