@@ -15,11 +15,11 @@ function App() {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
   const [light, setLight] = useState('light');
-  const [modalShow, setModalShow] = useState("none");
+  const [modalShow, setModalShow] = useState(false);
 
 
-  const displayToggle = () => {
-    modalShow === "none"? setModalShow("block"): console.log("its already none")
+  const modalToggle = () => {
+    modalShow === true? setModalShow(false): setModalShow(true);
   }
 
   useEffect(()=>{
@@ -37,9 +37,8 @@ function App() {
   },[])
   return (
 <div className = "App" >
-      <Nav height = {height} width = {width} displayToggle={displayToggle} modal = {modal} modalShow = {modalShow}/>
-      <Modal displayToggle={displayToggle} modal = {modal} modalShow = {modalShow} />
-
+      <Nav height = {height} width = {width} modalToggle={modalToggle} modalShow = {modalShow}/>
+      {modalShow && <Modal modalToggle={modalToggle} modalShow={modalShow}/>}
       <Routes>
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>
         <Route path="/coding" element={<Coding />} />

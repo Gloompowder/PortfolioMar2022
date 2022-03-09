@@ -10,7 +10,6 @@ function CodingCard(props) {
     const devops = value.devops
     const image = value.image
 
-    console.log(database, devops)
     return (
         <div className="projectdiv">
             <h1 className = "project">

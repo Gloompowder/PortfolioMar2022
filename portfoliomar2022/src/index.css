@@ -17,9 +17,44 @@
   padding: 2rem;
 }
 
+.Nav, .modalNav, .mobileNav{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  background-color:rgb(255, 238, 0);
+  color: block;
+}
+
+ul{
+  display:inline-flex;
+}
+
+.Nav a, .mobile-nav-menu, .modal-content a{
+  padding: 1rem;
+}
+.nav-home, .mobile-nav-home, .modal-home{
+  font-weight: 600;
+}
+
+.mobile-nav-home{
+  padding: 1rem;
+}
+
+.modal-trio{
+  color:block;
+}
+
+.nav-quad{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 /* MODAL */
 /* The Modal (background) */
 .modal {
+  display: block;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
