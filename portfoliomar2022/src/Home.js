@@ -1,21 +1,27 @@
 import * as React from "react";
 import Pdf from "./William Lin Resume.pdf";
 import Textline from "./Textline";
-import { BsTwitter, BsShop, BsFilePersonFill, BsGithub, BsMedium } from "react-icons/bs";
+import { BsTwitter, BsShop, BsGithub, BsMedium } from "react-icons/bs";
 
 function Home(props) {
     return (
         <div className="Home">
             <div className= "id-border">
 			<div className="content">
-				<h1>Hello, My Name is</h1><h1>William Lin</h1>
-				<p>I'm a</p> <Textline />
-				<a href={'https://www.redbubble.com/people/Gloompowder/shop'} target="_blank" rel="noreferrer"> <BsShop /></a>
-				<a href={'https://medium.com/@will-lin'} target="_blank" rel="noreferrer"> <BsMedium/></a>
-				<a href={'https:/www.twitter.com/gloompowder'} target="_blank" rel="noreferrer"> <BsTwitter/></a>
-				<a href={'https:/www.github.com/gloompowder'} target="_blank" rel="noreferrer"> <BsGithub/></a>
-				<a href={Pdf} target="_blank" rel="noreferrer">Resume <BsFilePersonFill/></a>
-				<a href="https://www.linkedin.com/in/williamlincodeanddesign/" target="blank" rel="noreferrer">LinkedIn</a>
+				<h1 className="intro">Hello, My Name is</h1><h1 className = "intro2">William Lin</h1>
+				<div className="typing">
+					<p className = "intro3">I'm a</p> <Textline />
+				</div>
+				<div className = "misc">
+					<a href={'https://www.redbubble.com/people/Gloompowder/shop'} target="_blank" rel="noreferrer"> <BsShop /></a>
+					<a href={'https://medium.com/@will-lin'} target="_blank" rel="noreferrer"> <BsMedium/></a>
+					<a href={'https:/www.twitter.com/gloompowder'} target="_blank" rel="noreferrer"> <BsTwitter/></a>
+					<a href={'https:/www.github.com/gloompowder'} target="_blank" rel="noreferrer"> <BsGithub/></a>
+				</div>
+				<div className= "cred">
+					<a href={Pdf} target="_blank" rel="noreferrer" className = "cv">Resume </a>
+					<a href="https://www.linkedin.com/in/williamlincodeanddesign/" target="blank" rel="noreferrer" className = "linkedin">LinkedIn</a>
+				</div>
 			</div>
 			</div>
             </div>

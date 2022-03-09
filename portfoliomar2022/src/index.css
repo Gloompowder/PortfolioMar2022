@@ -17,6 +17,70 @@
   padding: 2rem;
 }
 
+.intro{
+  margin-top: 3rem;
+}
+
+.intro2{
+  margin-bottom: 1.5rem;
+}
+
+.intro3, .intro4{
+  display: inline-flex;
+}
+@media only screen and (min-width: 501px) {
+  .content{
+    margin-left: 6.5rem;
+  }
+  .misc *{ 
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .cred *{
+    margin-right: 1.5rem;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .intro, .intro2 {
+    display:flex;
+    justify-content: center;
+  }
+  .misc{
+    display: flex;
+    justify-content: center;
+  }
+  .misc a{
+    padding: .5rem;
+    width: 1rem;
+    height: auto;
+  }
+  .typing{
+    display: inline-block;
+    align-content: center;
+  }
+  .cred{
+    display: flex;
+    justify-content :center;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .cv, .linkedin{
+    display:block;
+    justify-content: center;
+  }
+}
+.intro, .intro2, .intro3, .intro4 {
+  border: 1rem;
+}
+
+.misc>{
+  margin: 1rem;
+}
+
 .Nav, .modalNav, .mobileNav{
   display: flex;
   justify-content: space-around;
@@ -24,10 +88,27 @@
   background-color:rgb(255, 238, 0);
   color: block;
 }
+.modalNav{
+  flex-direction: column;
+}
 
 a{
   text-decoration: none;
 }
+a:link {
+  color: rgb(0, 0, 0);
+}
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
+.id-border{
+  border-color: #aaa;
+}
+
+
+
+
 
 ul{
   display:inline-flex;

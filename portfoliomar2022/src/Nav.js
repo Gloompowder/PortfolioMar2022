@@ -5,8 +5,7 @@ import { BiCode, BiPalette, BiBrain, BiMenu, BiPhone } from "react-icons/bi";
 
 function Nav(props) {
     const modalShow = props.modalShow;
-    let params = Object.values(useParams());
-    console.log(params)
+    const params = Object.values(useParams());
     const isMobile = () => {
         return props.width >= 760 ?         <nav className = "Nav" > 
         <Link className= "nav-home" to="/">William Lin</Link>
