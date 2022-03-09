@@ -25,6 +25,10 @@
   color: block;
 }
 
+a{
+  text-decoration: none;
+}
+
 ul{
   display:inline-flex;
 }
