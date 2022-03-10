@@ -1,14 +1,15 @@
 import * as React from "react";
 import { Link, useParams } from "react-router-dom";
-import { BiCode, BiPalette, BiBrain, BiMenu, BiPhone } from "react-icons/bi";
+import { BiCode, BiPalette, BiBrain, BiMenu, BiPhone, BiBorderAll, BiDockBottom } from "react-icons/bi";
 
 
 function Nav(props) {
     const modalShow = props.modalShow;
     const params = Object.values(useParams());
+
     const isMobile = () => {
         return props.width >= 760 ?         <nav className = "Nav" > 
-        <Link className= "nav-home" to="/">William Lin</Link>
+        <Link className= "nav-home" to="/" >William Lin</Link>
         <ul className = "nav-quad">
             <ul className = "nav-trio">
             <Link className = "about-me" to="/about-me" > <BiBrain /> About Me</Link>
