@@ -5,6 +5,10 @@
   font-family: Poppins;
   text-decoration:none;
 }
+svg{
+  margin: 0;
+  padding: 0;
+}
 
 .svg-div {
   flex-direction: flex;
@@ -19,24 +23,23 @@
 
 .cred > a {
   border-radius: 3rem;
-  padding: 1rem;
+  padding: .5rem 1rem;
   background-color: rgb(255, 251, 0);
 }
+.cred > a :hover{
+  background-color: rgba(0,0,0,0.4);
+}
 
-
-.cursor {
-  top: 300px;
-  left: 300px;
+.cursors .ball {
   width: 2rem;
   height: 2rem;
-  border: 2px solid rgb(255, 251, 0);
   background-color: rgb(255, 251, 0);
   border-radius: 50%;
   position: absolute;
-  opacity: 25%;
+  opacity: 10%;
   z-index: 1000;
-  transform: translate(-50%, -50%);
   pointer-events: none;
+  transform: translate(-50% -50%);
 }
 .intro{
   margin-top: 3rem;
@@ -46,64 +49,135 @@
   margin-bottom: 1.5rem;
 }
 
-.intro3, .intro4{
+.intro3, .intro4, .typing > h4{
   display: inline-flex;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  padding-right: .8rem;
+}
+.typing > h4 {
+  color:rgb(255, 217, 0)
 }
 
+.misc * :hover{ 
+  fill:rgb(255, 217, 0);
+}
+.cred >a:hover, .cred >a:active{
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 217, 0)
+}
 .typing{
   display:inline-flex;
 }
-@media only screen and (min-width: 501px) {
+
+@media only screen and (min-width: 901px){
+  .intro, .intro2{
+    font-size: 4rem;
+  }
   .content{
-    margin-left: 6.5rem;
+    margin-left: 7rem;
+    margin-top: 2rem;
   }
   .misc *{ 
     margin-right: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
   }
-  .cred *{
+  .typing{
+    font-size: 4rem;
+  }
+  .cred :nth-child(1){
+    margin-right: 1.5rem;
+  }
+
+}
+@media only screen and (min-width: 633px) and (max-width: 900px){
+  .content{
+    margin-left: 6.5rem;
+  }
+  .intro, .intro2 {
+    font-size: 2.8rem
+  }
+  .misc * {
+    margin-right:1rem;
+    margin-bottom:2rem;
+    margin-top: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .misc a{
+    padding: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .cred >a{
     margin-right: 1.5rem;
   }
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 632px) and (min-width: 479px) {
   .intro, .intro2 {
     display:flex;
     justify-content: center;
+    font-size: 2.8rem;
   }
   .misc{
     display: flex;
     justify-content: center;
   }
+  .misc * {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
   .misc a{
-    padding: .5rem;
+    margin:1rem;
+    padding: .25rem;
     width: 1rem;
     height: auto;
   }
   .typing{
-    display: inline-block;
-    align-content: center;
+    display: flex;
+    justify-content:center;
+    font-size: 2rem;
   }
   .cred{
     display: flex;
     justify-content :center;
   }
+  .cred > a{
+    display: block;
+    margin: 1rem;
+  }
 }
 
-@media only screen and (max-width: 380px) {
-  .cv, .linkedin{
-    display:block;
-    justify-content: center;
+@media only screen and (max-width: 480px) {
+  .typing p, .typing h4 {
+    font-size: 1.5rem;
+  }
+  .misc * {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .misc a{
+    margin:1rem;
+    padding: .25rem;
+    width: 1rem;
+    height: auto;
+  }
+  .cred, .typing, .intro, .intro2, .misc{
+    display: flex;
+    justify-content :center;
+  }
+  .cred > a{
+    margin: .75em;
   }
 }
 .intro, .intro2, .intro3, .intro4 {
   border: 1rem;
-}
-
-.misc>{
-  margin: 1rem;
 }
 
 .Nav, .modalNav, .mobileNav{
@@ -127,9 +201,7 @@ a:visited {
   color: rgb(0, 0, 0);
 }
 
-.id-border{
-  border-color: #aaa;
-}
+
 
 
 

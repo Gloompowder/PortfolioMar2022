@@ -12,20 +12,56 @@ import { React, useEffect }from 'react';
 
  function Cursor(){
      useEffect(()=>{
-    let mouseCursor = document.querySelector('.cursor');
+    let mouseCursor = document.querySelector('div.cursors');
+    let balls = mouseCursor.querySelectorAll('div')
 
-const cursor=(e)=>{
-  if (mouseCursor){
-    mouseCursor.style.top = e.pageY + 'px' 
-    mouseCursor.style.left = e.pageX + 'px'
-  }
-}
+let aimy = 0 
+let aimx = 0 
 
-window.addEventListener('mousemove', cursor);
-},[])
+balls.forEach((ball, index) =>{
+    let currenty = 0 
+    let currentx = 0 
+    let speed = 0.3 - index * 0.015
+    const animate = function () {
+        currentx += (aimx - currentx) * speed 
+        currenty += (aimy - currenty) * speed
+
+        ball.style.left = currentx + 'px'
+        ball.style.top = currenty + 'px'
+
+        requestAnimationFrame(animate)
+    }
+    animate()
+})
+
+
+document.addEventListener('mousemove', function(event){
+    console.log(event.target)
+    aimx = event.pageX
+    aimy = event.pageY
+});
+})
      return(
-         <div className = 'cursor'>
-             <div></div>
+         <div className = 'cursors'>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
+            <div className='ball'></div>
          </div>
      )
  }
