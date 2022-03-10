@@ -8,7 +8,8 @@ import Design from "./Design.js";
 import AboutMe from "./AboutMe.js";
 import Contact from "./Contact";
 import Home from "./Home.js";
-import Modal from "./Modal.js"
+import Modal from "./Modal.js";
+import Cursor from './Cursor.js';
 
 
 function App() {
@@ -17,11 +18,11 @@ function App() {
   const [light, setLight] = useState('light');
   const [modalShow, setModalShow] = useState(false);
 
-
   const modalToggle = () => {
     modalShow === true? setModalShow(false): setModalShow(true);
   }
 
+  
   useEffect(()=>{
     const updateWindowDimensions = () => {
       const newHeight = window.innerHeight;
@@ -33,10 +34,12 @@ function App() {
     window.addEventListener("resize", updateWindowDimensions);
     return () => window.removeEventListener("resize", updateWindowDimensions) 
     };
+
     addingWindowLogger();
   },[])
   return (
 <div className = "App" >
+  <Cursor />
       <Nav height = {height} width = {width} modalToggle={modalToggle} modalShow = {modalShow}/>
       {modalShow && <Modal modalToggle={modalToggle} modalShow={modalShow}/>}
       <Routes>

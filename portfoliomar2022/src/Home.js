@@ -1,6 +1,6 @@
 import * as React from "react";
 import Pdf from "./William Lin Resume.pdf";
-import Textline from "./Textline";
+import Textline from "./Textline.js";
 import { BsTwitter, BsShop, BsGithub, BsMedium } from "react-icons/bs";
 
 function Home(props) {
@@ -10,7 +10,7 @@ function Home(props) {
 			<div className="content">
 				<h1 className="intro">Hello, My Name is</h1><h1 className = "intro2">William Lin</h1>
 				<div className="typing">
-					<p className = "intro3">I'm a</p> <Textline />
+					<p className = "intro3">I'm a </p> <Textline />
 				</div>
 				<div className = "misc">
 					<a href={'https://www.redbubble.com/people/Gloompowder/shop'} target="_blank" rel="noreferrer"> <BsShop /></a>
