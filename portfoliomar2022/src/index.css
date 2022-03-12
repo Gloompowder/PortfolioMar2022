@@ -10,15 +10,41 @@ svg{
   padding: 0;
 }
 
-.svg-div {
-  flex-direction: flex;
+.svg-div div{
+  flex-direction: column;
   flex-wrap: wrap;
+  display: inline-flex;
+  margin: auto;
+}
+.svg div{
+  margin: auto;
+  width: auto;
+  display:inline;
+  flex-direction: row;
 }
 
+.svg-div{
+  margin: 5vw;
+  width:90;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.svg-div div h4{
+  display:inline-flex;
+  margin-block-end: none;
+  margin-block-end: none;
+
+  margin: auto;
+  margin-bottom: 1rem;
+}
 .svg-div img{
-  width: 5rem;
+  width: 20vw;
   height: auto;
-  padding: 2rem;
+  border-color:silver;
+  border-width: 2px;
+  display: inline;
+  margin: 1rem 0;
 }
 
 .cred > a {
@@ -36,10 +62,10 @@ svg{
   background-color: rgb(255, 238, 0);
   border-radius: 50%;
   position: absolute;
-  opacity: 10%;
+  opacity: 5%;
   z-index: 1000;
   pointer-events: none;
-  transform: translate(-50% -50%);
+  transform: translate(-50%, -50%);
 }
 .intro{
   margin-top: 4rem;
@@ -64,7 +90,6 @@ svg{
   transition: .3s;
 }
 
-
 .Nav a:hover, .Nav a:active, .mobileNav a:hover, .mobileNav a:active, .mobileNav .mobile-nav-menu:hover, .mobileNav .mobile-nav-menu:active{
   background-color: rgb(255, 217, 0, 1);
   color: white;
@@ -83,111 +108,51 @@ svg{
   display:inline-flex;
 }
 
-@media only screen and (min-width: 901px){
-  .intro, .intro2{
-    font-size: 5rem;
-  }
-  .content{
-    margin-left: 7rem;
-    margin-top: 4rem;
-  }
-  .misc *{ 
-    margin-right: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    height: 2rem;
-    width: 2rem;
-  }
-  .typing > p, .typing > h4{
-    font-size: 3rem;
-  }
-  .cred :nth-child(1){
-    margin-right: 1.5rem;
-  }
-
-}
-@media only screen and (min-width: 633px) and (max-width: 900px){
-  .content{
-    margin-left: 6.5rem;
-  }
-  .intro, .intro2 {
-    font-size: 3rem
-  }
-  .misc * {
-    margin-right:1rem;
-    margin-bottom:2rem;
-    margin-top: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
-  }
-  .misc a{
-    padding: 0.25rem;
-    width: 1rem;
-    height: 1rem;
-  }
-
-  .cred >a{
-    margin-right: 1.5rem;
-  }
+.content2{
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
-
-@media only screen and (max-width: 632px) and (min-width: 479px) {
-  .intro, .intro2 {
-    display:flex;
-    justify-content: center;
-    font-size: 2.8rem;
-  }
-  .misc{
-    display: flex;
-    justify-content: center;
-  }
-  .misc * {
-    height: 1.5rem;
-    width: 1.5rem;
-  }
-  .misc a{
-    margin:1rem;
-    padding: .25rem;
-    width: 1rem;
-    height: auto;
-  }
-  .typing{
-    display: flex;
-    justify-content:center;
-    font-size: 2rem;
-  }
-  .cred{
-    display: flex;
-    justify-content :center;
-  }
-  .cred > a{
-    display: block;
-    margin: 1rem;
-  }
+.content2 a {
+  background-color: rgb(255, 238, 0);
+  padding: .5rem 1rem;
+  border-radius: 5rem;
+  transition: .3s;
 }
 
-@media only screen and (max-width: 480px) {
-  .typing p, .typing h4 {
-    font-size: 1.5rem;
-  }
-  .misc * {
-    height: 1.5rem;
-    width: 1.5rem;
-  }
-  .misc a{
-    margin:1rem;
-    padding: .25rem;
-    width: 1rem;
-    height: auto;
-  }
-  .cred, .typing, .intro, .intro2, .misc{
-    display: flex;
-    justify-content :center;
-  }
-  .cred > a{
-    margin: .75em;
-  }
+.content2 a:hover, .content2 a:active{
+  transition: .3s;
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 217, 0)
+}
+
+.content2 a{
+  margin-right: 1rem;
+}
+.summary{
+  display: inline;
+  margin-bottom: 1rem;
+  width: clamp(20vw 35vw 40vw);
+}
+
+.profilepic{
+  filter:drop-shadow(.5rem .5rem rgb(255, 217, 0))
+}
+
+.header-me{
+  margin-bottom: .5rem;
+  display:inline-flex;
+}
+.header-search {
+  border-color:rgb(20, 10, 0);
+  transition: 3s;
+  width: 100px;
+}
+
+.header-search:hover, .header-search:focus {
+  border: 1.5px solid #000000;
+  background-color: white;
 }
 .intro, .intro2, .intro3, .intro4 {
   border: 1rem;
@@ -214,7 +179,9 @@ a:visited {
   color: rgb(0, 0, 0);
 }
 
-
+.svg-div h4{
+  display:inline;
+}
 
 
 
@@ -283,4 +250,324 @@ ul{
   cursor: pointer;
 }
 
+.styles_typicalWrapper__1_Uvh::after{
+  color:black;
+  font-weight:normal;
+}
 
+
+@media only screen and (min-width: 901px){
+  .intro, .intro2{
+    font-size: 5rem;
+  }
+  .content{
+    margin-left: 7rem;
+    margin-top: 4rem;
+  }
+  .misc *{ 
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 2rem;
+    width: 2rem;
+  }
+  .typing > p, .typing > h4{
+    font-size: 3rem;
+  }
+  .cred :nth-child(1){
+    margin-right: 1.5rem;
+  }
+
+  .content2-subdiv{
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .profilepic{
+    max-width: 40vw;
+    min-width: 35vw;
+    height:auto;
+    display: inline-flex;
+    margin-right: 3rem;
+  }
+
+  .header-me{
+    font-size: 3rem;
+  }
+
+  .summary{
+    width: 45vw;
+    height: auto;
+    display: inline-flex;
+  }
+  .pic-summary{
+    display:inline-flex;
+    flex-direction: flex;
+    height:auto;
+    margin-bottom: 2rem;
+  }
+  .pic-summary :nth-child(2){
+    margin-bottom:1.5rem;
+  }
+}
+@media only screen and (min-width: 717px) and (max-width: 900px){
+  .content{
+    margin-left: 6.5rem;
+  }
+  .intro, .intro2 {
+    font-size: 3rem
+  }
+  .misc * {
+    margin-right:1rem;
+    margin-bottom:2rem;
+    margin-top: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .misc a{
+    padding: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .cred >a{
+    margin-right: 1.5rem;
+  }
+
+  .profilepic{
+    max-width: 40vw;
+    min-width: 35vw;
+    height:auto;
+    display: block;
+    margin-right: 1.5rem;
+  }
+
+  .summary{
+    min-width: 40vw;
+    max-width: 45vw;
+    height: auto;
+    display: inline-flex;
+  }
+  .pic-summary{
+    display:inline-flex;
+    flex-direction: flex;
+    height: auto;
+  }
+  .pic-summary :nth-child(2){
+    margin-bottom:1.5rem;
+  }
+  .header-me{
+    font-size: 2.5rem;
+    margin: auto;
+    width:auto;
+    margin-bottom: .5rem;
+    display: block;
+  }
+}
+@media only screen and (min-width: 633px) and (max-width: 716px){
+  .content{
+    margin-left: 6.5rem;
+  }
+  .intro, .intro2 {
+    font-size: 3rem
+  }
+  .misc * {
+    margin-right:1rem;
+    margin-bottom:2rem;
+    margin-top: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .misc a{
+    padding: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .cred >a{
+    margin-right: 1.5rem;
+  }
+
+  .pic-summary{
+    display:block;
+    flex-direction: flex;
+    height: auto;
+  }
+  .pic-summary :nth-child(2){
+    margin-bottom:1.5rem;
+  }
+  .profilepic{
+    max-width: 40vw;
+    min-width: 35vw;
+    height:auto;
+    display: block;
+    margin:auto;
+    margin-bottom: 1.5rem;
+  }
+  .summary{
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: clamp(20vw 35vw 60%);
+    text-align:center;
+    justify-content:center;
+  }
+
+  .header-me{
+    font-size: 2.5rem;
+    margin: auto;
+    width:auto;
+    margin-bottom: .5rem;
+    display: block;
+    text-align: center;
+  }
+  .abt-me-a{
+    display:inline-block;
+  }
+  .cred2{
+    margin:auto;
+    justify-content: inline-block;
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 632px) and (min-width: 481px) {
+  .intro, .intro2 {
+    display:flex;
+    justify-content: center;
+    font-size: 2.8rem;
+  }
+  .misc{
+    display: flex;
+    justify-content: center;
+  }
+  .misc * {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .misc a{
+    margin:1rem;
+    padding: .25rem;
+    width: 1rem;
+    height: auto;
+  }
+  .typing{
+    display: flex;
+    justify-content:center;
+    font-size: 2rem;
+  }
+  .cred{
+    display: flex;
+    justify-content :center;
+  }
+  .cred > a{
+    display: block;
+    margin: 1rem;
+  }
+  .content2{
+    display: inline-block;
+    flex-direction: row;
+    align-content: center;
+  }
+  .header-me{
+    font-size: 2rem;
+    margin: auto;
+    width:auto;
+    margin-bottom: .5rem;
+    display: block;
+    text-align: center;
+  }
+  .summary{
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: clamp(20vw 35vw 40vw);
+    text-align:center;
+    justify-content:center;
+  }
+  .profilepic{
+    display:block;
+    justify-content: center;
+    width: 50%;
+    height:auto;
+    margin:auto;
+    margin-bottom: 1rem;
+  }
+  .cred2{
+    margin:auto;
+    justify-content: center;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .typing p, .typing h4 {
+    font-size: 1.5rem;
+  }
+  .misc * {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .misc a{
+    margin:1rem;
+    padding: .25rem;
+    width: 1rem;
+    height: auto;
+  }
+  .cred, .typing, .intro, .intro2, .misc{
+    display: flex;
+    justify-content :center;
+  }
+  .cred > a{
+    margin: .75em;
+  }
+    .profilepic{
+    width: 50%; 
+    height:auto;
+    margin: auto;
+    margin-bottom: 1rem;
+    justify-content: center;
+    display: block;
+  }
+  .header-me{
+    font-size: 1.8rem;
+    margin: auto;
+    width:auto;
+    margin-bottom: .5rem;
+    display: block;
+    text-align: center;
+  }
+  .content2{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+    .header-me{
+    font-size: 1.8rem;
+    margin: auto;
+    width:auto;
+    margin-bottom: .5rem;
+    display: block;
+    text-align: center;
+  }
+    .summary{
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: clamp(20vw 35vw 40vw);
+    text-align:center;
+    justify-content:center;
+  }
+  
+  .content2 a {
+    margin-top: 1.5rem;
+    margin-right: none;
+    margin:auto;
+    flex-direction: column;
+    display: inline-block;
+  }
+  .cred2{
+    margin:auto;
+    justify-content: center;
+    display: block;
+        align-content: center;
+  }
+}

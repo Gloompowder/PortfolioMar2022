@@ -1,21 +1,28 @@
 import * as React from "react";
+import { BsSearch } from 'react-icons/bs';
+import { useParams } from "react-router-dom";
+
 
 function SecondNav(props) {
+    const params = useParams()
+    const searching=(e)=>{
+        e.preventDefault(e)
+        console.log('searching for'+ params + 'projects')
+    }
     return (
         <div className="SecondNav">
-            This is the second nav! It can function as a search bar.
             <div className = "searchbar">
             <form >
         <label htmlFor="header-search">
-            <span className="visually-hidden">Search {props.search} projects</span>
         </label>
         <input
+            className = 'searchbox'
             type="text"
             id="header-search"
             placeholder={props.search + " projects"}
             name="s" 
         />
-        <button type="submit">Search</button>
+        <button type="submit" onClick={(e)=>console.log('searching') }><BsSearch/>Search</button>
     </form>
             </div>
         </div>

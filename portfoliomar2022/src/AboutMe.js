@@ -21,36 +21,91 @@ import Heroku from './images/heroku-4.svg';
 function AboutMe(props) {
     return (
         <div className="AboutMe">
-            <h2>
-                Hello, My name is William Lin
+            <div className='content2'>
+            <h2 className = 'header-me'>
+                About Me
             </h2>
-            <img src = {profilepic} alt= "William Lin Profile"/>
-            <p>
-            I am a FullStack Develoepr located in New York City. I am an avid learner and I focus my projects whether graphic or technologically based
+            <div className = 'pic-summary'>
+            <img className='profilepic' src = {profilepic} alt= "William Lin Profile"/>
+            <div>
+            <p className = "summary">
+            I am a FullStack Developer located in New York City. I am an avid learner and I focus my projects whether graphically or technologically based
             around effective, compelling design.
-            a software engineer experienced in Ruby on Rails, React, and Javascript based programming with a background in Computer Information Systems.
-            I am a full stack developer with experience in the following:
             </p>
-                <p>You may check out my </p><a href="https://www.github.com/Gloompowder" target="_blank" rel="noreferrer">Github</a>
-                <a href="https://willlin1996.wixsite.com/portfolio" alt="wix link" target = "_blank" rel="noreferrer">
-                this!
+            <p className = 'summary'>
+            I am experienced in Ruby on Rails, React, and Javascript based programming with a background in Computer Information Systems.
+            Below are some tools which I use.
+            </p>
+            <div className='cred2'>
+            <a className = 'abt-me-a' href="https://www.github.com/Gloompowder" target="_blank" rel="noreferrer">Github</a>
+                <a className = 'abt-me-a' href="https://willlin1996.wixsite.com/portfolio" alt="wix link" target = "_blank" rel="noreferrer">
+                Designs
             </a>
-                <div className = "svg-div">
-                    <img src={Html} alt = "HTML"/>
-                    <img src={Css} alt = "Css"/>
-                    <img src={Javascript} alt = "Javascript"/>
-                    <img src={ReactSVG} alt = "ReactSVG"/>
-                    <img src={Postgresql} alt = "Postgresql"/>
-                    <img src={Heroku} alt = "Heroku"/>
-                    <img src={Python} alt = "Python"/>
-                    <img src={Java} alt = "Java"/>
-                    <img src={Ruby} alt = "Ruby"/>
-                    <img src={Rails} alt = "Rails"/>
-                    <img src={Adobe} alt = "Adobe"/>
-                    <img src={Illustrator} alt = "Illustrator"/>
-                    <img src={Photoshop} alt = "Photoshop"/>
-                    <img src={Github} alt = "Github"/>
-                    <img src={Animate} alt = "Animate"/>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div className = "svg-div">
+                    <div>
+                        <img src={Html} alt = "HTML"/>
+                        <h4>HTML</h4>
+                    </div>
+                    <div>
+                        <img src={Css} alt = "Css"/>
+                        <h4>CSS</h4>
+                    </div>
+                    <div>
+                        <img src={Javascript} alt = "Javascript"/>
+                        <h4>JAVASCRIPT</h4>
+                    </div>
+                    <div>
+                        <img src={ReactSVG} alt = "ReactSVG"/>
+                        <h4>React</h4>
+                    </div>
+                    <div>
+                        <img src={Postgresql} alt = "Postgresql"/>
+                        <h4>PostgreSQL</h4>
+                    </div>
+                    <div>
+                        <img src={Heroku} alt = "Heroku"/>
+                        <h4>Heroku</h4>
+                    </div>
+                    <div>
+                        <img src={Python} alt = "Python"/>
+                        <h4>Python</h4>
+                    </div>
+                    <div>
+                        <img src={Java} alt = "Java"/>  
+                        <h4>Java</h4>
+                    </div>
+                    <div>
+                        <img src={Ruby} alt = "Ruby"/>
+                        <h4>Ruby</h4>
+                    </div>
+                    <div>
+                        <img src={Rails} alt = "Rails"/>
+                        <h4>Rails</h4>
+                    </div>
+                    <div>
+                        <img src={Adobe} alt = "Adobe"/>
+                        <h4>Adobe</h4>
+                    </div>
+                    <div>
+                        <img src={Illustrator} alt = "Illustrator"/>
+                        <h4>Illustrator</h4>
+                    </div>
+                    <div>
+                        <img src={Photoshop} alt = "Photoshop"/>
+                        <h4>Photoshop</h4>
+                    </div>
+                    <div>
+                        <img src={Github} alt = "Github"/>
+                        <h4>Github</h4>
+                    </div>                    
+                    <div>
+                        <img src={Animate} alt = "Animate"/>
+                        <h4>Animate</h4>
+                    </div>
                 </div>
         </div>
     );

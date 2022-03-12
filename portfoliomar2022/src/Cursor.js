@@ -22,12 +22,15 @@ balls.forEach((ball, index) =>{
     let currenty = 0 
     let currentx = 0 
     let speed = 0.3 - index * 0.015
+    let size = 3 + index * .2
     const animate = function () {
         currentx += (aimx - currentx) * speed 
         currenty += (aimy - currenty) * speed
 
         ball.style.left = currentx + 'px'
         ball.style.top = currenty + 'px'
+        ball.style.width = size + 'rem'
+        ball.style.height = size + 'rem'
 
         requestAnimationFrame(animate)
     }
@@ -36,15 +39,12 @@ balls.forEach((ball, index) =>{
 
 
 document.addEventListener('mousemove', function(event){
-    console.log(event.target)
     aimx = event.pageX
     aimy = event.pageY
 });
 })
      return(
          <div className = 'cursors'>
-            <div className='ball'></div>
-            <div className='ball'></div>
             <div className='ball'></div>
             <div className='ball'></div>
             <div className='ball'></div>

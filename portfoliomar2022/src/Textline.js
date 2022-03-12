@@ -4,11 +4,11 @@ import Typical from 'react-typical';
 function Textline() {
     const steps = [
       ' Full Stack Developer 💻', 
-      2000,
+      1000,
       ' Graphic Designer 🖌️', 
-      2000,
+      1000,
       ' Problem Solver 🕵🏻‍♂️', 
-      2000
+      1000
     ];
     return (
               <Typical
