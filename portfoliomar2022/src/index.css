@@ -9,6 +9,9 @@ svg{
   margin: 0;
   padding: 0;
 }
+._autoresponse, .honey{
+  display:none;
+}
 
 .svg-div div{
   flex-direction: column;
@@ -39,12 +42,13 @@ svg{
   margin-bottom: 1rem;
 }
 .svg-div img{
-  width: 20vw;
+  width: 15vw;
   height: auto;
   border-color:silver;
   border-width: 2px;
   display: inline;
-  margin: 1rem 0;
+  padding:1rem;
+  margin: 1rem;
 }
 
 .cred > a {
@@ -255,6 +259,20 @@ ul{
   font-weight:normal;
 }
 
+.myTools{
+  font-size: 1.8rem;
+  margin: auto;
+  width:auto;
+  margin-bottom: .5rem;
+  margin-top: 2rem;
+  display: block;
+  text-align: center;
+}
+
+.buffer{
+  height:5vh;
+  width: 100%;
+}
 
 @media only screen and (min-width: 901px){
   .intro, .intro2{
@@ -346,6 +364,7 @@ ul{
     max-width: 45vw;
     height: auto;
     display: inline-flex;
+    margin-bottom: 1rem;
   }
   .pic-summary{
     display:inline-flex;
@@ -393,7 +412,7 @@ ul{
     height: auto;
   }
   .pic-summary :nth-child(2){
-    margin-bottom:1.5rem;
+    margin-bottom: none;
   }
   .profilepic{
     max-width: 40vw;
@@ -405,7 +424,7 @@ ul{
   }
   .summary{
     display: inline-block;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     width: clamp(20vw 35vw 60%);
     text-align:center;
     justify-content:center;
@@ -424,8 +443,18 @@ ul{
   }
   .cred2{
     margin:auto;
-    justify-content: inline-block;
+    justify-content: center;
     display: block;
+        align-content: center;
+        text-align: center;
+  }
+  .content2 a {
+    margin-top: 1.5rem;
+    margin-right: none;
+    margin:auto;
+    margin-bottom: none;
+    flex-direction: column;
+    display: inline-block;
   }
 
 }
@@ -478,7 +507,7 @@ ul{
   }
   .summary{
     display: inline-block;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     width: clamp(20vw 35vw 40vw);
     text-align:center;
     justify-content:center;
@@ -495,6 +524,16 @@ ul{
     margin:auto;
     justify-content: center;
     display: block;
+        align-content: center;
+        text-align: center;
+  }
+  .content2 a {
+    margin-top: 1.5rem;
+    margin:auto;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    flex-direction: column;
+    display: inline-block;
   }
 }
 
@@ -551,7 +590,7 @@ ul{
   }
     .summary{
     display: inline-block;
-    margin-bottom: 1rem;
+    margin:1rem 0 ;
     width: clamp(20vw 35vw 40vw);
     text-align:center;
     justify-content:center;
@@ -569,5 +608,9 @@ ul{
     justify-content: center;
     display: block;
         align-content: center;
+        text-align: center;
+  }
+  .svg-div div h4{
+    font-size: .8rem;
   }
 }

@@ -29,7 +29,7 @@ function AboutMe(props) {
             <img className='profilepic' src = {profilepic} alt= "William Lin Profile"/>
             <div>
             <p className = "summary">
-            I am a FullStack Developer located in New York City. I am an avid learner and I focus my projects whether graphically or technologically based
+            I am a Full Stack Developer located in New York City. I am an avid learner and I focus my projects whether graphically or technologically based
             around effective, compelling design.
             </p>
             <p className = 'summary'>
@@ -45,6 +45,10 @@ function AboutMe(props) {
             </div>
             </div>
             </div>
+            <div className='buffer'></div>
+            <h2 className = 'myTools'>
+                My Tools
+            </h2>
             <div className = "svg-div">
                     <div>
                         <img src={Html} alt = "HTML"/>
