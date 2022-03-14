@@ -15,11 +15,13 @@ function Contact(props) {
 
   return (
     <div className="Contact">
+        <div className = 'content3'>
         <h2>Contact</h2>
-    <p>Thanks for viewing, leave a message!</p>
-    <form action="https://formsubmit.co/your@email.com" method="POST">
+    <p>Thanks for viewing, let's stay in touch!</p>
+    <form action="https://formsubmit.co/willlin1996@gmail.com" method="POST">
       <label>Name
         <input
+        name = 'text'
           type="text" 
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -29,6 +31,7 @@ function Contact(props) {
       </label>
       <label>Email
         <input
+        name = 'email'
           type="email" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -38,6 +41,7 @@ function Contact(props) {
       </label>
       <label>Subject
         <input
+        name = 'text'
           type="text" 
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
@@ -46,23 +50,26 @@ function Contact(props) {
       </label>
       <label>CC
         <input
+        name='text'
           type="text" 
           value={cc}
           onChange={(e) => setCC(e.target.value)}
           placeholder='CC'
         />
       </label>
-      <label>
+      <label            className='honey'>
         <input 
-            className='honey'
+        className = 'honey'
+        name = 'honey'
           type="text" 
-          value='honey'
+          value=''
           onChange={(e) => setHoney(e.target.value)}
           placeholder='CC'
         />
       </label>
-      <label>
+      <label className='_autoresponse'>
         <input 
+        name = '_autoresponse'
             className='_autoresponse'
           type="text" 
           value="Thank you for reaching out! Due to a high outreach volume, I will respond within 1-3 business days. In the meantime, please do not hesitate to reach out to me via Linkedin or any other social media platforms. I hope you have a wonderful day and I wish you all the best. Sincerely, Will"
@@ -71,18 +78,22 @@ function Contact(props) {
         />
       </label>
       <textarea 
+      rows= '10'
+      cols='45'
       placeholder="Your Message" 
       className="form-control" 
       name="message" 
       onClick={(e)=>setMessage(e.target.value)} 
+      resize='none'
       required></textarea>
+       <a href={Pdf} target="_blank" rel="noreferrer">Resume <BsFilePersonFill/></a>
+            <a href="https://www.linkedin.com/in/williamlincodeanddesign/" target="blank" rel="noreferrer">LinkedIn<BsFillBriefcaseFill/></a>
+            <a href="mailto:willlin1996@gmail.com?subject=Let's Connect!">Contact<BsFillEnvelopeFill/></a> 
       <button type='Submit'>
           Send
       </button>
     </form>
-    <a href={Pdf} target="_blank" rel="noreferrer">Resume <BsFilePersonFill/></a>
-            <a href="https://www.linkedin.com/in/williamlincodeanddesign/" target="blank" rel="noreferrer">LinkedIn<BsFillBriefcaseFill/></a>
-            <a href="mailto:willlin1996@gmail.com?subject=Let's Connect!">Contact<BsFillEnvelopeFill/></a> 
+    </div>
     </div>
   )
 }
