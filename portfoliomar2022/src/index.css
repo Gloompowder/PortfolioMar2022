@@ -184,10 +184,6 @@ a:visited {
   display:inline;
 }
 
-
-
-
-
 ul{
   display:inline-flex;
 }
@@ -356,6 +352,11 @@ ul{
   .pic-summary :nth-child(2){
     margin-bottom:1.5rem;
   }
+  .contactpic{
+    width: 40vw;
+    height: auto;
+    display:inline;
+  }
 }
 @media only screen and (min-width: 717px) and (max-width: 900px){
   .content{
@@ -410,6 +411,11 @@ ul{
     width:auto;
     margin-bottom: .5rem;
     display: block;
+  }
+  .contactpic{
+    width: 40vw;
+    height: auto;
+    display:inline;
   }
 }
 @media only screen and (min-width: 633px) and (max-width: 716px){
@@ -485,6 +491,20 @@ ul{
     margin-bottom: none;
     flex-direction: column;
     display: inline-block;
+  }
+  .content3 h2{
+    margin:auto;
+    width: auto;
+    display: block;
+    text-align: center;
+  }
+  .contactpic{
+    width: 40vw;
+    align-content: center;
+    margin: auto;
+    display: inline;
+    justify-content: center;
+    padding-bottom: 1rem;
   }
 
 }
@@ -565,6 +585,21 @@ ul{
     flex-direction: column;
     display: inline-block;
   }
+
+  .content3 h2{
+    margin:auto;
+    width: auto;
+    display: block;
+    text-align: center;
+  }
+  .contactpic{
+    width: 60vw;
+    align-content: center;
+    margin: auto;
+    padding-bottom: 1rem;
+    display: inline;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -642,5 +677,19 @@ ul{
   }
   .svg-div div h4{
     font-size: .8rem;
+  }
+  .content3 h2{
+    margin:auto;
+    width: auto;
+    display: block;
+    text-align: center;
+  }
+  .contactpic{
+    width: 60vw;
+    align-content: center;
+    margin: auto;
+    padding-bottom: 1rem;
+    display: inline;
+    justify-content: center;
   }
 }

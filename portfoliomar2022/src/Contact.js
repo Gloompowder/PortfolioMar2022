@@ -2,7 +2,7 @@ import * as React from "react";
 import { BsFillEnvelopeFill, BsFillBriefcaseFill, BsFilePersonFill } from 'react-icons/bs'
 import Pdf from "./William Lin Resume.pdf";
 import { useState } from "react";
-import Contact from './images/portfolio-illustration-Contact.png'
+import contactdoodle from './images/portfolio-illustration-contact.png'
 
 
 function Contact(props) {
@@ -18,6 +18,7 @@ function Contact(props) {
     <div className="Contact">
         <div className = 'content3'>
         <h2>Contact</h2>
+        <img className='contactpic' src = {contactdoodle} alt= "William Lin Profile"/>
     <p>Thanks for viewing, let's stay in touch!</p>
     <form action="https://formsubmit.co/willlin1996@gmail.com" method="POST">
       <label>Name
