@@ -2,6 +2,7 @@ import * as React from "react";
 import Pdf from "./William Lin Resume.pdf";
 import Textline from "./Textline.js";
 import { BsTwitter, BsShop, BsGithub, BsMedium } from "react-icons/bs";
+import doodle from './images/portfolio-doodle.png';
 
 function Home(props) {
     return (

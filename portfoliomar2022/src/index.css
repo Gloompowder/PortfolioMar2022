@@ -280,16 +280,27 @@ ul{
     display:inline-block;
 }
 
-.content3 *{
+.content3 label, .content3 a, .content3 button{
   display:block;
   padding:.5rem 0;
+}
+
+.content3 label{
+  font-weight: bolder;
+}
+
+.content3 input{
+  display: block;
 }
 
 .content3 > h2{
   font-size: 3rem;
 }
 
-._autoresponse, .honey{
+._autoresponse{
+  display:none;
+}
+.honey{
   display:none;
 }
 

@@ -2,6 +2,7 @@ import * as React from "react";
 import { BsFillEnvelopeFill, BsFillBriefcaseFill, BsFilePersonFill } from 'react-icons/bs'
 import Pdf from "./William Lin Resume.pdf";
 import { useState } from "react";
+import Contact from './images/portfolio-illustration-Contact.png'
 
 
 function Contact(props) {
@@ -20,7 +21,7 @@ function Contact(props) {
     <p>Thanks for viewing, let's stay in touch!</p>
     <form action="https://formsubmit.co/willlin1996@gmail.com" method="POST">
       <label>Name
-        <input
+          <input
         name = 'text'
           type="text" 
           value={name}
@@ -30,6 +31,7 @@ function Contact(props) {
         />
       </label>
       <label>Email
+
         <input
         name = 'email'
           type="email" 
