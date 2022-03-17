@@ -39,7 +39,7 @@ function AboutMe(props) {
             <div className='cred2'>
             <a className = 'abt-me-a' href="https://www.github.com/Gloompowder" target="_blank" rel="noreferrer">Github</a>
                 <a className = 'abt-me-a' href="https://willlin1996.wixsite.com/portfolio" alt="wix link" target = "_blank" rel="noreferrer">
-                Designs
+                Design
             </a>
             </div>
             </div>

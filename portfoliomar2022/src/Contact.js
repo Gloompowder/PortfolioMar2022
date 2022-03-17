@@ -18,9 +18,11 @@ function Contact(props) {
     <div className="Contact">
         <div className = 'content3'>
         <h2>Contact</h2>
+        <p fontWeight= 'bold'>Thanks for viewing, let's stay in touch!</p>
+                    <div className= 'text-div'>
         <img className='contactpic' src = {contactdoodle} alt= "William Lin Profile"/>
-    <p>Thanks for viewing, let's stay in touch!</p>
-    <form action="https://formsubmit.co/willlin1996@gmail.com" method="POST">
+
+        <form action="https://formsubmit.co/willlin1996@gmail.com" method="POST" className="contactform">
       <label>Name
           <input
         name = 'text'
@@ -32,7 +34,6 @@ function Contact(props) {
         />
       </label>
       <label>Email
-
         <input
         name = 'email'
           type="email" 
@@ -80,6 +81,7 @@ function Contact(props) {
           readOnly
         />
       </label>
+      <label>Message
       <textarea 
       rows= '10'
       cols='45'
@@ -89,13 +91,12 @@ function Contact(props) {
       onClick={(e)=>setMessage(e.target.value)} 
       resize='none'
       required></textarea>
-       <a href={Pdf} target="_blank" rel="noreferrer">Resume <BsFilePersonFill/></a>
-            <a href="https://www.linkedin.com/in/williamlincodeanddesign/" target="blank" rel="noreferrer">LinkedIn<BsFillBriefcaseFill/></a>
-            <a href="mailto:willlin1996@gmail.com?subject=Let's Connect!">Contact<BsFillEnvelopeFill/></a> 
+      </label>
       <button type='Submit'>
           Send
       </button>
     </form>
+        </div>
     </div>
     </div>
   )

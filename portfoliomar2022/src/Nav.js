@@ -9,7 +9,7 @@ function Nav(props) {
 
     const isMobile = () => {
         return props.width >= 760 ?         <nav className = "Nav" > 
-        <Link className= "nav-home" to="/" >William Lin</Link>
+        {params === ''? <Link className= "nav-home" to="/" borderColor = 'orange' borderWidth= '2px'>William Lin</Link>:<Link className= "nav-home" to="/" >William Lin</Link>}
         <ul className = "nav-quad">
             <ul className = "nav-trio">
             <Link className = "about-me" to="/about-me" > <BiBrain /> About Me</Link>

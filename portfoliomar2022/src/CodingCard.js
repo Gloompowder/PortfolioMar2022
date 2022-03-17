@@ -38,14 +38,14 @@ function CodingCard(props) {
                 {database}
             </p>
             {devops?
-            <div>
+            <span>
                  <h4>
                 devops
             </h4>
             <p className = "devops">
                 {devops}
             </p>
-            </div>:null}
+            </span>:null}
         </div>
     );
   }
