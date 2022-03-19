@@ -328,12 +328,34 @@ form{
   display: inline-block;
 }
 .NotFound{
-background-color: rgb(255, 238, 0);
-color: white;
+background-color: rgb(255, 255, 255);
+color: black;
 display: block;
 justify-content: center;
 text-align: center;
 margin:auto;
+}
+.NotFound h1{
+  margin:5vh;
+  font-size: 2rem;
+}
+.NotFound img{
+  margin-bottom: 5vh;
+}
+.NotFound a{
+  margin: .5rem;
+  padding: .5rem 1rem;
+  background-color:rgb(255, 238, 0);
+  border-radius: 4rem;
+  margin-top: 2rem;
+}
+.notfound{
+margin:auto;
+justify-content: center;
+display: block;
+max-width: 300px;
+min-width: 40vw;
+height: auto;
 }
 
 .content3 button:hover{
