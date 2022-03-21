@@ -50,63 +50,63 @@ function AboutMe(props) {
                 My Tools
             </h2>
             <div className = "svg-div">
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Html} alt = "HTML"/>
                         <h4>HTML</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Css} alt = "Css"/>
                         <h4>CSS</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Javascript} alt = "Javascript"/>
                         <h4>JAVASCRIPT</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={ReactSVG} alt = "ReactSVG"/>
                         <h4>React</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Postgresql} alt = "Postgresql"/>
                         <h4>PostgreSQL</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Heroku} alt = "Heroku"/>
                         <h4>Heroku</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Python} alt = "Python"/>
                         <h4>Python</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Java} alt = "Java"/>  
                         <h4>Java</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Ruby} alt = "Ruby"/>
                         <h4>Ruby</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Rails} alt = "Rails"/>
                         <h4>Rails</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Adobe} alt = "Adobe"/>
                         <h4>Adobe</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Illustrator} alt = "Illustrator"/>
                         <h4>Illustrator</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Photoshop} alt = "Photoshop"/>
                         <h4>Photoshop</h4>
                     </div>
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Github} alt = "Github"/>
                         <h4>Github</h4>
                     </div>                    
-                    <div>
+                    <div className ="svg-logo">
                         <img src={Animate} alt = "Animate"/>
                         <h4>Animate</h4>
                     </div>

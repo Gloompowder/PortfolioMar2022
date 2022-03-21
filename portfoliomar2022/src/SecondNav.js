@@ -5,10 +5,6 @@ import { useParams } from "react-router-dom";
 
 function SecondNav(props) {
     const params = useParams()
-    const searching=(e)=>{
-        e.preventDefault(e)
-        console.log('searching for'+ params + 'projects')
-    }
     return (
         <div className="SecondNav">
             <div className = "searchbar">
