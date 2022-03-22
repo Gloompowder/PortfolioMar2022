@@ -33,7 +33,7 @@ function AboutMe(props) {
             around effective, compelling design.
             </p>
             <p className = 'summary'>
-            I am experienced in Ruby on Rails, React, and Javascript based programming with a background in Computer Information Systems.
+            I am experienced with Ruby on Rails, React, and Javascript based programming with a background in Computer Information Systems.
             Below are some tools which I use.
             </p>
             <div className='cred2'>
@@ -45,7 +45,9 @@ function AboutMe(props) {
             </div>
             </div>
             </div>
-            <div className='buffer'></div>
+            <div class="arrow bounce">
+  <a class="fa fa-arrow-down fa-2x" href="#"></a>
+</div>
             <h2 className = 'myTools'>
                 My Tools
             </h2>

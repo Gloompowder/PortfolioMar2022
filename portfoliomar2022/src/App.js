@@ -41,6 +41,9 @@ function App() {
 <div className = "App" >
   <Cursor />
       <Nav height = {height} width = {width} modalToggle={modalToggle} modalShow = {modalShow}/>
+      <div className="progress-container fixed-top">
+  <span className="progress-bar"></span>
+</div>
       {modalShow && <Modal modalToggle={modalToggle} modalShow={modalShow}/>}
       <Routes>
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>

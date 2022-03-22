@@ -278,11 +278,6 @@ form{
   text-align: center;
 }
 
-.buffer{
-  height:5vh;
-  width: 100%;
-}
-
 .content3{
   margin-bottom: .5rem;
   margin-top: 2rem;
@@ -400,18 +395,71 @@ height: auto;
   border-radius: 5rem;
 }
 
-.modal-home{
-  margin: auto;
-  align-content: center;
-  text-align: center;
-}
 
-.modal-about-me, .modal-coding, .modal-design, .modal-contact{
+.modal-about-me, .modal-coding, .modal-design, .modal-contact, .modal-home{
   display: block;
   margin:auto;
   justify-content: center;
   text-align: center;
 }
+
+.modal-about-me :hover, .modal-coding :hover, .modal-design :hover, .modal-contact :hover, .modal-home :hover{
+  background-color: rgb(255, 238, 0);
+}
+
+.fixed-top {
+  position: sticky;
+  z-index: 3;
+  top: 5;
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.arrow.bounce{
+  position:sticky;
+  top: 25;
+  z-index: 100;
+}
+
+.arrow.bounce > a{
+  background-color: rgb(255, 238, 0);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.progress-container {
+  top: 5;
+  width: 100%;
+  background-color: white;
+  height: 5px;
+  display: block;
+  position: absolute;
+}
+.progress-bar {
+  background-color: rgb(255,217, 0);
+  width: 0%;
+  display: block;
+  height: inherit;
+}
+
 .projectdiv div{
   border: 2px solid rgb(172, 172, 172);
   color: rgb(172, 172, 172);
