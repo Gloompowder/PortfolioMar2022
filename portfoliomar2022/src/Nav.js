@@ -5,8 +5,8 @@ import { BiCode, BiPalette, BiBrain, BiMenu, BiPhone, BiBorderAll, BiDockBottom 
 
 function Nav(props) {
     const modalShow = props.modalShow;
-    const params = Object.values(useParams());
-
+    const params = useParams();
+    console.log(Object.values(params));
     const isMobile = () => {
         return props.width >= 760 ?         <nav className = "Nav" > 
         {params === ''? <Link className= "nav-home" to="/" borderColor = 'orange' borderWidth= '2px'>William Lin</Link>:<Link className= "nav-home" to="/" >William Lin</Link>}

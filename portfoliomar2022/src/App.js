@@ -10,6 +10,8 @@ import Contact from "./Contact";
 import Home from "./Home.js";
 import Modal from "./Modal.js";
 import Cursor from './Cursor.js';
+import Screenmark from "./Screenmark.js";
+import Progressbar from "./Progressbar.js";
 
 
 function App() {
@@ -35,15 +37,15 @@ function App() {
     return () => window.removeEventListener("resize", updateWindowDimensions) 
     };
 
+    
     addingWindowLogger();
   },[])
   return (
 <div className = "App" >
   <Cursor />
       <Nav height = {height} width = {width} modalToggle={modalToggle} modalShow = {modalShow}/>
-      <div className="progress-container fixed-top">
-  <span className="progress-bar"></span>
-</div>
+      <Progressbar />
+      <Screenmark height = {height} width = {width}/>
       {modalShow && <Modal modalToggle={modalToggle} modalShow={modalShow}/>}
       <Routes>
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>

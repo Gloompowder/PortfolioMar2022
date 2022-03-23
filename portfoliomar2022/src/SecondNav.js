@@ -25,4 +25,3 @@ function SecondNav(props) {
     );
   }
   
-  export default SecondNav;

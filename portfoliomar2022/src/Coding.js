@@ -1,5 +1,5 @@
 import * as React from "react";
-import SecondNav from "./SecondNav";
+// import SecondNav from "./SecondNav";
 import BrainGain from "./images/BrainGain.png";
 import PlanetHack from "./images/PlanetHack.png";
 import GuessWho from "./images/GuessWho.png";
@@ -7,7 +7,7 @@ import CodingCard from "./CodingCard";
 
 function Coding(props) {
     const codingProjects=[
-        {"hack-the-planet": {
+        {"Hack the planet!": {
             description:"An inter planatery mission to reach for the stars as humanity's last hope to sustain itself. This project was completed within 48hrs as apart of MLH's Space Theme. Please read the instructions carefully once in the game.",
             frontend:["Javascript", "React"],
             backend:["Ruby", "Ruby on Rails"],
@@ -39,17 +39,15 @@ function Coding(props) {
 
     return (
         <div className="Coding">
-                  <SecondNav search="coding"/>
-            You're on the Coding Page
-            You may also look at my <a href="https://www.github.com/gloompowder" alt="wix link" target = "_blank" rel="noreferrer">
-                Github!
+                  {/* <SecondNav search="coding"/> */}
+                  <a href="https://www.github.com/gloompowder" className= "coding-link" alt="wix link" target = "_blank" rel="noreferrer">
+                Github
             </a>
-            <h5>
-                Be aware, some of the projects may have depreciated. You may still watch the demo videos
-            </h5>
             {codingProjects.map((project, index)=>{
                 return(<CodingCard key = {index} id = {codingProjects.indexOf(project)} project = {project}/>) 
             })}
+            <div className="scroll-up" onClick={window.scrollTo(0, 0)}>
+            </div>
         </div>
     );
   }

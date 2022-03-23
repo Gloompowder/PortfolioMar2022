@@ -101,6 +101,10 @@ svg{
 .misc * :hover{ 
   fill:rgb(255, 217, 0);
 }
+
+.misc {
+  fill:black;
+}
 .cred >a:hover, .cred >a:active{
   background-color: rgb(0, 0, 0);
   color:rgb(255, 217, 0)
@@ -137,10 +141,6 @@ svg{
   width: clamp(20vw 35vw 40vw);
 }
 
-.profilepic{
-  filter:drop-shadow(.5rem .5rem rgb(255, 217, 0))
-}
-
 .header-me{
   margin-bottom: .5rem;
   display:inline-flex;
@@ -161,13 +161,12 @@ svg{
   background-color: white;
 }
 
-.svg-logo{
-
+.devops-div, .database-div{
+  display: block;
 }
-.svg-logo :hover{
-filter: drop-shadow(0 0 0.75rem rgb(199, 199, 199));
+.profilepic, .contactpic{
+  border-radius: .5rem;
 }
-
 .intro, .intro2, .intro3, .intro4 {
   border: 1rem;
 }
@@ -186,9 +185,7 @@ filter: drop-shadow(0 0 0.75rem rgb(199, 199, 199));
 a{
   text-decoration: none;
 }
-a:link {
-  color: rgb(0, 0, 0);
-}
+
 a:visited {
   color: rgb(0, 0, 0);
 }
@@ -331,7 +328,8 @@ form{
   padding: .5rem 1rem;
   background-color:rgb(255, 238, 0);
   color:black;
-  margin: 1rem;
+  margin: auto;
+  margin-top: 1rem;
   border-radius: 5rem;
   display: inline-block;
 }
@@ -374,7 +372,7 @@ height: auto;
   padding: .5rem 1rem;
   background-color:black;
   color:rgb(255, 217, 0);
-  margin: 1rem;
+  margin-top: 1rem;
   border-radius: 5rem;
   display: inline-block;
 }
@@ -413,70 +411,162 @@ height: auto;
   top: 5;
 }
 
-.arrow {
-  text-align: center;
-  margin: 8% 0;
-}
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-.arrow.bounce{
-  position:sticky;
-  top: 25;
-  z-index: 100;
-}
-
-.arrow.bounce > a{
-  background-color: rgb(255, 238, 0);
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
 
 .progress-container {
   top: 5;
   width: 100%;
-  background-color: white;
-  height: 5px;
-  display: block;
-  position: absolute;
-}
-.progress-bar {
-  background-color: rgb(255,217, 0);
-  width: 0%;
-  display: block;
-  height: inherit;
+  height: 8px;
+  background: rgb(255, 255, 255);
+  position: fixed;
+  z-index:500;
 }
 
-.projectdiv div{
-  border: 2px solid rgb(172, 172, 172);
-  color: rgb(172, 172, 172);
-  border-radius: 10px;
-  background-color: rgb(241, 241, 241);
-  display: inline-block;
-  padding:5px;
-  margin:5px;
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: rgb(255,217, 0);
+  width: 0%;
 }
-.projectdiv div p{
-  border: 2px solid rgb(172, 172, 172);
-  color: rgb(172, 172, 172);
-  border-radius: 10px;
-  background-color: rgb(241, 241, 241);
-  display: inline-block;
-  padding:5px;
-  margin:5px;
+
+.projectdiv{
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  justify-content: center;
+  width: 60%;
+  height: auto;
+  align-content:center;
+  background-color: white;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  filter:drop-shadow( .5rem .5rem .5rem rgb(255,217,0, 10%))
+}
+.moreInfo{
+  margin: 1.5rem;
+  display: block;
+  margin-bottom: 0;
+}
+.moreInfo > div >div {
+  border-radius: 1em;
+  border: 1px solid silver;
+  color: silver;
+  padding: .5em;
+  font-size: smaller;
+}
+.moreInfo > div  {
+  margin: 1em;
+}
+.lessInfo{
+  display: none;
+}
+.project-block{
+  display:inline;
+}
+.moreInfo > div{
+  display:block;
+}
+.project-details{
+  display:inline-flex;
+}
+
+.moreInfo > div>h4{
+  display:inline-block;
+  margin-right: 1rem;
+}
+.moreInfo > div > div{
+  display:inline-block;
+  margin-right: 1rem;
+}
+
+.project, .description{
+  display:inline-block;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.projectdiv img{
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+}
+.Coding{
+  justify-content: center;
+  margin:auto;
+  width: auto;
+  display:flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+.coding-link {
+padding: .5rem 1rem;
+margin: auto;
+justify-content: center;
+display: inline-block;
+text-align: center;
+background-color: rgb(255, 238, 0);
+border-radius: 5rem;
+}
+.coding-link:hover, .coding-link:active{
+  background-color: black;
+  color: rgb(255, 217, 0);
+}
+.Design{
+  display: flex;
+  flex-direction: column;
+}
+
+.Design *{
+  text-align: center;
+}
+.doodle{
+  justify-content: center;
+  margin:auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio{
+  padding: .5rem 1rem;
+  justify-content: center;
+  background-color:rgb(255, 238, 0);
+  display: block;
+  color:black;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 5rem;
+}
+.Design :nth-child(2){
+  display:inline-block;
+  margin: 1rem;
+}
+
+.portfolio :hover, .portfolio :active{
+  background-color: black;
+  color: rgb(255, 217, 0);
+}
+
+.doodle{
+  width: 40vw;
+  height: auto;
+  display: block;
+}
+.coding-link :hover, .conding-link :active{
+  padding: .5rem 1rem;
+  border-radius: 5rem;
+  justify-content: center;
+  display:flex;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 238, 0);
+  }
+
+.project-heading{
+  display: block;
+  justify-content: space-between;
+}
+
+.info-icon{
+  display:inline;
+  justify-self: flex-end;
+  margin-right: .5rem;
 }
 
 @media only screen and (min-width: 901px){
@@ -536,7 +626,7 @@ height: auto;
     height: auto;
     margin-right: 2rem;
     display: inline-block;
-    padding-bottom: 400px
+    padding-bottom: 350px
   }
   .content3 form{
     display: inline-flex;
@@ -553,6 +643,9 @@ height: auto;
   }
   .text-div{
     display: inline-flex;
+  }
+  .projectdiv{
+    width: 60vw;
   }
 }
 @media only screen and (min-width: 717px) and (max-width: 900px){
@@ -666,12 +759,12 @@ height: auto;
     margin-bottom: none;
   }
   .profilepic{
-    width: 80%;
-    align-content: center;
+    width: 50%; 
+    height:auto;
     margin: auto;
-    padding-bottom: 1rem;
-    display: block;
+    margin-bottom: 1rem;
     justify-content: center;
+    display: block;
   }
   .summary{
     display: inline-block;
@@ -853,6 +946,30 @@ height: auto;
     border-radius: 4px;
     margin: none;
   }
+  .profilepic{
+    width: 50%; 
+    height:auto;
+    margin: auto;
+    margin-bottom: 1rem;
+    justify-content: center;
+    display: block;
+  }
+  .moreInfo > div > h4{
+    display: block;
+  }
+  .moreInfo > div >div {
+    border-radius: 1em;
+    border: 1px solid silver;
+    color: silver;
+    padding: .5em;
+    font-size: smaller;
+    display:inline-block;
+  }
+  .moreInfo > div  {
+    margin: 1em;
+    display:block;
+    justify-content: flex;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -960,5 +1077,21 @@ height: auto;
     border: 3px solid black;
     border-radius: 4px;
     margin: none;
+  }
+  .moreInfo > div > h4{
+    display: block;
+  }
+  .moreInfo > div >div {
+    border-radius: 1em;
+    border: 1px solid silver;
+    color: silver;
+    padding: .5em;
+    font-size: smaller;
+    display:inline-block;
+  }
+  .moreInfo > div  {
+    margin: 1em;
+    display:block;
+    justify-content: flex;
   }
 }

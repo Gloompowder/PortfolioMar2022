@@ -45,9 +45,6 @@ function AboutMe(props) {
             </div>
             </div>
             </div>
-            <div class="arrow bounce">
-  <a class="fa fa-arrow-down fa-2x" href="#"></a>
-</div>
             <h2 className = 'myTools'>
                 My Tools
             </h2>

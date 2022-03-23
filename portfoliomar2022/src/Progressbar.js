@@ -1,35 +1,24 @@
-function scrollProgressBar() {
-    var getMax = function () {
-      return $(document).height() - $(window).height();
-    };
-  
-    var getValue = function () {
-      return $(window).scrollTop();
-    };
-  
-    var progressBar = $(".progress-bar"),
-      max = getMax(),
-      value,
-      width;
-  
-    var getWidth = function () {
-      // Calculate width in percentage
-      value = getValue();
-      width = (value / max) * 100;
-      width = width + "%";
-      return width;
-    };
-  
-    var setWidth = function () {
-      progressBar.css({ width: getWidth() });
-    };
-  
-    $(document).on("scroll", setWidth);
-    $(window).on("resize", function () {
-      // Need to reset max
-      max = getMax();
-      setWidth();
-    });
+import * as React from "react";
+import {useEffect} from "react";
+function ProgressBar() {
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
+  useEffect(()=>{
+    myFunction()
+    window.addEventListener('scroll', myFunction);
+  },[])
+
+  return(
+    <div className="progress-div">
+  <div className="progress-container">
+    <div className="progress-bar" id="myBar"></div>
+  </div>
+</div>
+  )
   }
 
-  export default scrollProgressBar;
+  export default ProgressBar;

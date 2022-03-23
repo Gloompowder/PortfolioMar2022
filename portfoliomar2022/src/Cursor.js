@@ -8,9 +8,9 @@
 //   }
 // }
 // window.addEventListener('mousemove',cursor);
-import { React, useEffect }from 'react';
-
- function Cursor(){
+import { React, useEffect, useState }from 'react';
+function Cursor(){
+    const [cD, setcD] = useState('');
      useEffect(()=>{
     let mouseCursor = document.querySelector('div.cursors');
     let balls = mouseCursor.querySelectorAll('div')
@@ -36,7 +36,6 @@ balls.forEach((ball, index) =>{
     }
     animate()
 })
-
 
 document.addEventListener('mousemove', function(event){
     aimx = event.pageX
