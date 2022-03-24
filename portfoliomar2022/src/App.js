@@ -10,7 +10,7 @@ import Contact from "./Contact";
 import Home from "./Home.js";
 import Modal from "./Modal.js";
 import Cursor from './Cursor.js';
-import Screenmark from "./Screenmark.js";
+// import Screenmark from "./Screenmark.js";
 import Progressbar from "./Progressbar.js";
 
 
@@ -45,7 +45,7 @@ function App() {
   <Cursor />
       <Nav height = {height} width = {width} modalToggle={modalToggle} modalShow = {modalShow}/>
       <Progressbar />
-      <Screenmark height = {height} width = {width}/>
+      {/* <Screenmark height = {height} width = {width}/> */}
       {modalShow && <Modal modalToggle={modalToggle} modalShow={modalShow}/>}
       <Routes>
         <Route path = "/" element = {<Home  height = {height} width = {width}/>}/>
