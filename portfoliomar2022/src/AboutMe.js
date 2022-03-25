@@ -112,6 +112,7 @@ function AboutMe(props) {
                         <h4>Animate</h4>
                     </div>
                 </div>
+                <ScreenMark width = {props.width} height = {props.height}/>
         </div>
     );
   }

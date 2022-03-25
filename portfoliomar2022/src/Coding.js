@@ -39,7 +39,8 @@ function Coding(props) {
     ]
 
     return (
-        <div className="Coding">
+        <div className= "content4">
+                <div className="Coding">
                   {/* <SecondNav search="coding"/> */}
                   <a href="https://www.github.com/gloompowder" className= "coding-link" alt="wix link" target = "_blank" rel="noreferrer">
                 Github
@@ -49,6 +50,8 @@ function Coding(props) {
             })}
             <div className="scroll-up" onClick={window.scrollTo(0, 0)}>
             </div>
+        </div>
+        <ScreenMark width = {props.width} height= {props.height}/>
         </div>
     );
   }

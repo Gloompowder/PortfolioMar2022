@@ -17,7 +17,7 @@ import Progressbar from "./Progressbar.js";
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
-  const [light, setLight] = useState('light');
+  // const [light, setLight] = useState('light');
   const [modalShow, setModalShow] = useState(false);
 
   const modalToggle = () => {

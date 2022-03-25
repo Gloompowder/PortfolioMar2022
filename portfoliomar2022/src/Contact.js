@@ -3,6 +3,7 @@ import { BsFillEnvelopeFill, BsFillBriefcaseFill, BsFilePersonFill } from 'react
 import Pdf from "./William Lin Resume.pdf";
 import { useState } from "react";
 import contactdoodle from './images/portfolio-illustration-contact.png'
+import ScreenMark from "./Screenmark";
 
 
 function Contact(props) {
@@ -103,6 +104,7 @@ function Contact(props) {
     </form>
         </div>
     </div>
+    <ScreenMark width={props.width} height ={props.height}/>
     </div>
   )
 }

@@ -1,15 +1,18 @@
 import * as React from "react";
 
 function ScreenMark(props){
+    function smoothScroll(){
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
     function myFunction() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
-        {return scrolled > .2 ? <div>
-            Scroll up!
-        </div> :
-        <div>
+        {return scrolled < .1? <div>
             Scroll
+        </div> :
+        <div onClick={smoothScroll}>
+            Scroll up
             </div>}
       }
     return(
