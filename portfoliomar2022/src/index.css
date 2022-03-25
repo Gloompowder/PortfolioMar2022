@@ -9,7 +9,20 @@ svg{
   margin: 0;
   padding: 0;
 }
+.project{
+  margin-bottom: .5rem;
+}
+.abt-me-a{
+  margin-top: 1rem;
+}
 
+.modal-content a:hover, .modal-content a:active{
+background-color: rgb(255, 238, 0);
+color: white;
+font-weight: bolder;
+}
+
+a:link{color: black;}
 .svg-div div{
   flex-direction: column;
   flex-wrap: wrap;
@@ -294,7 +307,7 @@ form{
   font-size: 3rem;
 }
 
-.content3 :nth-child(2){
+.content3 >:nth-child(2){
   margin-bottom: 1rem;
 }
 
@@ -552,12 +565,13 @@ border-radius: 5rem;
   display: block;
   color:black;
   margin: auto;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border-radius: 5rem;
 }
-.Design :nth-child(2){
-  display:inline-block;
-  margin: 1rem;
+
+.Design a:hover, .Design a:active{
+  background-color: black;
+  color:rgb(255, 217, 0);
 }
 
 .portfolio :hover, .portfolio :active{
@@ -569,6 +583,7 @@ border-radius: 5rem;
   width: 40vw;
   height: auto;
   display: block;
+  margin-top: 2rem;
 }
 .coding-link :hover, .conding-link :active{
   padding: .5rem 1rem;
@@ -815,9 +830,7 @@ border-radius: 5rem;
         text-align: center;
   }
   .content2 a {
-    margin-top: 1.5rem;
-    margin-right: none;
-    margin:auto;
+    margin: .5rem .5rem 0 .5rem;
     margin-bottom: none;
     flex-direction: column;
     display: inline-block;
@@ -930,10 +943,7 @@ border-radius: 5rem;
         text-align: center;
   }
   .content2 a {
-    margin-top: 1.5rem;
-    margin:auto;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin: .5rem .5rem 0 .5rem;
     flex-direction: column;
     display: inline-block;
   }
@@ -1054,9 +1064,7 @@ border-radius: 5rem;
   }
   
   .content2 a {
-    margin-top: 1.5rem;
-    margin-right: none;
-    margin:auto;
+    margin: .5rem .5rem 0 .5rem;
     flex-direction: column;
     display: inline-block;
   }
@@ -1066,6 +1074,9 @@ border-radius: 5rem;
     display: block;
         align-content: center;
         text-align: center;
+  }
+  .content3{
+    margin: 1rem;
   }
   .svg-div div h4{
     font-size: .8rem;
@@ -1115,5 +1126,11 @@ border-radius: 5rem;
     margin: 1em;
     display:block;
     justify-content: flex;
+  }
+  .projectdiv{
+    width: 90%;
+  }
+  .cred2 :nth-child(3){
+    margin-top: 1rem;
   }
 }

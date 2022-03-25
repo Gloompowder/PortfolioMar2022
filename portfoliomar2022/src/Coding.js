@@ -4,6 +4,7 @@ import BrainGain from "./images/BrainGain.png";
 import PlanetHack from "./images/PlanetHack.png";
 import GuessWho from "./images/GuessWho.png";
 import CodingCard from "./CodingCard";
+import ScreenMark from "./Screenmark";
 
 function Coding(props) {
     const codingProjects=[

@@ -14,6 +14,11 @@ function Contact(props) {
   const [honey, setHoney] = useState("");
   const [message, setMessage] = useState("");
 
+  const messageSmall = () =>{
+    console.log(props.width)
+    return props.width < 470 ? '30' : '45'
+  }
+
   return (
     <div className="Contact">
         <div className = 'content3'>
@@ -84,7 +89,7 @@ function Contact(props) {
       <label>Message
       <textarea 
       rows= '10'
-      cols='45'
+      cols= {messageSmall()}
       placeholder="Your Message" 
       className="form-control" 
       name="message" 

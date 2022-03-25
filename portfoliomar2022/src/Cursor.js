@@ -8,9 +8,8 @@
 //   }
 // }
 // window.addEventListener('mousemove',cursor);
-import { React, useEffect, useState }from 'react';
+import { React, useEffect }from 'react';
 function Cursor(){
-    const [cD, setcD] = useState('');
      useEffect(()=>{
     let mouseCursor = document.querySelector('div.cursors');
     let balls = mouseCursor.querySelectorAll('div')

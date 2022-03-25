@@ -15,6 +15,8 @@ import Java from './images/java-4.svg';
 import Animate from './images/adobe-animate.svg';
 import Photoshop from './images/photoshop-cc-7.svg';
 import Heroku from './images/heroku-4.svg';
+import { Link } from "react-router-dom";
+import ScreenMark from "./Screenmark";
 
 
 
@@ -34,13 +36,13 @@ function AboutMe(props) {
             </p>
             <p className = 'summary'>
             I am experienced with Ruby on Rails, React, and Javascript based programming with a background in Computer Information Systems.
-            Below are some tools which I use.
             </p>
             <div className='cred2'>
             <a className = 'abt-me-a' href="https://www.github.com/Gloompowder" target="_blank" rel="noreferrer">Github</a>
                 <a className = 'abt-me-a' href="https://willlin1996.wixsite.com/portfolio" alt="wix link" target = "_blank" rel="noreferrer">
                 Design
             </a>
+            <Link className ="abt-me-a" to="/contact" > Contact</Link>
             </div>
             </div>
             </div>

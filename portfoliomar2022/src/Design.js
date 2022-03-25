@@ -7,12 +7,12 @@ function Design(props) {
     return (
         <div className="Design">
                   {/* <SecondNav search="design"/> */}
-            <img className='doodle' src = {doodle} alt= "desk"/>
-            <div>Design Page Under Construction</div>
-            <a href="https://willlin1996.wixsite.com/portfolio" className= "portfolio" alt="wix link" target = "_blank" fontSize= '4rem' rel="noreferrer">
+                  <a href="https://willlin1996.wixsite.com/portfolio" className= "portfolio" alt="wix link" target = "_blank" fontSize= '4rem' rel="noreferrer">
                 Portfolio
             </a>
             <Link className= "portfolio" to="/">Home</Link>
+            <img className='doodle' src = {doodle} alt= "desk"/>
+            <div>Design Page Under Construction</div>
         </div>
     );
   }
